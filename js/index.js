@@ -55,6 +55,28 @@ navText[4].textContent = siteContent["nav"]["nav-item-5"];
 navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
+
+
+
+
+// added 2 new nav objects
+const dontTouch = document.createElement('a');
+dontTouch.textContent = "Dont Touch";
+
+const touch = document.createElement('a');
+touch.textContent = "touch";
+
+const nav = document.querySelector("nav")
+nav.prepend(dontTouch);
+nav.append(touch);
+
+
+
+navText.forEach(ele =>{
+  ele.style.color= 'green';
+})
+
+
 //Logo Image
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -114,12 +136,21 @@ bottomContent[1].textContent = siteContent['main-content']['product-content'];
 bottomContent[2].textContent = siteContent['main-content']['vision-content'];
 
 /* Contact Section */
+
+// Contact Title
 const titleH4 = document.querySelectorAll('.contact h4');
 
 titleH4[0].textContent = siteContent['contact']['contact-h4'];
 
-
+//Contact Content
 const contactH4 = document.querySelectorAll('.contact p');
-contactH4[0].textContent = siteContent['contact']['email'];
+contactH4[0].textContent = siteContent['contact']['address'];
 contactH4[1].textContent = siteContent['contact']['phone'];
-contactH4[2].textContent = siteContent['contact']['address'];
+contactH4[2].textContent = siteContent['contact']['email'];
+
+
+/* footer */
+
+const footCopyright  = document.querySelector('footer p');
+
+footCopyright.textContent = siteContent['footer']['copyright'];
