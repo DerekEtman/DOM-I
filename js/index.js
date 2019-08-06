@@ -41,6 +41,11 @@ const siteContent = {
 
 
 
+/* * */
+const everything = document.querySelector("*");
+everything.style.backgroundColor = "black";
+everything.style.color = "white";
+
 
 /* nav Bar */
 
@@ -61,10 +66,17 @@ navText[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // added 2 new nav objects
 const dontTouch = document.createElement('a');
+dontTouch.href = "#";
 dontTouch.textContent = "Dont Touch";
+dontTouch.style.color = "red";
+
+dontTouch.onblur;
+dontTouch.click();
 
 const touch = document.createElement('a');
+touch.href = "https://www.geoguessr.com/world/play";
 touch.textContent = "touch";
+touch.style.color = "lightblue";
 
 const nav = document.querySelector("nav")
 nav.prepend(dontTouch);
@@ -144,9 +156,13 @@ titleH4[0].textContent = siteContent['contact']['contact-h4'];
 
 //Contact Content
 const contactH4 = document.querySelectorAll('.contact p');
+
 contactH4[0].textContent = siteContent['contact']['address'];
+contactH4[0].style.width = '25%';
+
 contactH4[1].textContent = siteContent['contact']['phone'];
 contactH4[2].textContent = siteContent['contact']['email'];
+
 
 
 /* footer */
